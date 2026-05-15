@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from ..registry import ToolDefinition
+from ..tools.permission_remove import PermissionRemovalPanel
 from ..tools.signature_remove import SignatureRemovalPanel
 
 
@@ -15,6 +16,12 @@ TOOLS: list[ToolDefinition] = [
         name="PDF 签名移除",
         description="移除 PDF 数字签名，支持单文件、多文件和目录批量处理。",
         factory=SignatureRemovalPanel,
+    ),
+    ToolDefinition(
+        tool_id="permission-remove",
+        name="PDF 权限移除",
+        description="移除无打开密码 PDF 的编辑、打印、复制等所有者权限限制。",
+        factory=PermissionRemovalPanel,
     ),
 ]
 

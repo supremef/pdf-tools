@@ -13,6 +13,13 @@ class SignatureRemovalOptions:
 
 
 @dataclass(slots=True)
+class PermissionRemovalOptions:
+    input_files: list[Path]
+    input_directory: Path | None
+    output_directory: Path
+
+
+@dataclass(slots=True)
 class TaskResult:
     success: bool
     message: str

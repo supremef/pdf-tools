@@ -1,0 +1,6 @@
+assets/
+build/
+dist/
+.gitignore
+build.bat
+*.spec
